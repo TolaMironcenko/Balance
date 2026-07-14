@@ -1,0 +1,957 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00100000000000000000001 /* BalanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000001 /* BalanceApp.swift */; };
+		B00200000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00200000000000000000002 /* ContentView.swift */; };
+		B00300000000000000000003 /* FinanceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00300000000000000000003 /* FinanceCategory.swift */; };
+		B00400000000000000000004 /* FinanceTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00400000000000000000004 /* FinanceTransaction.swift */; };
+		B00500000000000000000005 /* MonthlyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00500000000000000000005 /* MonthlyBudget.swift */; };
+		B00600000000000000000006 /* CurrencyFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00600000000000000000006 /* CurrencyFormatting.swift */; };
+		B00700000000000000000007 /* FinanceCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00700000000000000000007 /* FinanceCalculations.swift */; };
+		B00800000000000000000008 /* BudgetEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00800000000000000000008 /* BudgetEditorView.swift */; };
+		B00900000000000000000009 /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00900000000000000000009 /* BudgetsView.swift */; };
+		B00A0000000000000000000A /* EmptyStateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A0000000000000000000A /* EmptyStateCard.swift */; };
+		B00B0000000000000000000B /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B0000000000000000000B /* SummaryCard.swift */; };
+		B00C0000000000000000000C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C0000000000000000000C /* DashboardView.swift */; };
+		B00D0000000000000000000D /* CSVDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D0000000000000000000D /* CSVDocument.swift */; };
+		B00E0000000000000000000E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E0000000000000000000E /* SettingsView.swift */; };
+		B00F0000000000000000000F /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F0000000000000000000F /* NewTransactionView.swift */; };
+		B01000000000000000000010 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01000000000000000000010 /* TransactionRow.swift */; };
+		B01100000000000000000011 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01100000000000000000011 /* TransactionsView.swift */; };
+		B01200000000000000000012 /* FinanceCalculationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01200000000000000000012 /* FinanceCalculationsTests.swift */; };
+		B01300000000000000000013 /* CustomCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01400000000000000000014 /* CustomCategory.swift */; };
+		B01400000000000000000014 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01500000000000000000015 /* AnalyticsView.swift */; };
+		B01500000000000000000015 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01600000000000000000016 /* CategoriesView.swift */; };
+		B01600000000000000000016 /* BalanceAdjustmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01700000000000000000017 /* BalanceAdjustmentView.swift */; };
+		B01700000000000000000017 /* CategoryIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01800000000000000000018 /* CategoryIconView.swift */; };
+		B01800000000000000000018 /* BalanceModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02000000000000000000020 /* BalanceModelContainer.swift */; };
+		B02000000000000000000020 /* BalanceMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02100000000000000000021 /* BalanceMacApp.swift */; };
+		B02100000000000000000021 /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02200000000000000000022 /* MacContentView.swift */; };
+		B02200000000000000000022 /* MacEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02300000000000000000023 /* MacEditors.swift */; };
+		B02300000000000000000023 /* FinanceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00300000000000000000003 /* FinanceCategory.swift */; };
+		B02400000000000000000024 /* FinanceTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00400000000000000000004 /* FinanceTransaction.swift */; };
+		B02500000000000000000025 /* MonthlyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00500000000000000000005 /* MonthlyBudget.swift */; };
+		B02600000000000000000026 /* CustomCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01400000000000000000014 /* CustomCategory.swift */; };
+		B02700000000000000000027 /* CurrencyFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00600000000000000000006 /* CurrencyFormatting.swift */; };
+		B02800000000000000000028 /* FinanceCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00700000000000000000007 /* FinanceCalculations.swift */; };
+		B02900000000000000000029 /* CategoryIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01800000000000000000018 /* CategoryIconView.swift */; };
+		B02A0000000000000000002A /* BalanceModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02000000000000000000020 /* BalanceModelContainer.swift */; };
+		B03000000000000000000030 /* BalanceWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02400000000000000000024 /* BalanceWatchApp.swift */; };
+		B03100000000000000000031 /* WatchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02500000000000000000025 /* WatchRootView.swift */; };
+		B03200000000000000000032 /* WatchAddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02600000000000000000026 /* WatchAddTransactionView.swift */; };
+		B03300000000000000000033 /* FinanceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00300000000000000000003 /* FinanceCategory.swift */; };
+		B03400000000000000000034 /* FinanceTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00400000000000000000004 /* FinanceTransaction.swift */; };
+		B03500000000000000000035 /* MonthlyBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00500000000000000000005 /* MonthlyBudget.swift */; };
+		B03600000000000000000036 /* CustomCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01400000000000000000014 /* CustomCategory.swift */; };
+		B03700000000000000000037 /* CurrencyFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00600000000000000000006 /* CurrencyFormatting.swift */; };
+		B03800000000000000000038 /* FinanceCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00700000000000000000007 /* FinanceCalculations.swift */; };
+		B03900000000000000000039 /* CategoryIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01800000000000000000018 /* CategoryIconView.swift */; };
+		B03A0000000000000000003A /* BalanceModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02000000000000000000020 /* BalanceModelContainer.swift */; };
+		B04000000000000000000040 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A0000000000000000002A /* AppTheme.swift */; };
+		B04100000000000000000041 /* CategoryDesignOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B0000000000000000002B /* CategoryDesignOptions.swift */; };
+		B04200000000000000000042 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A0000000000000000002A /* AppTheme.swift */; };
+		B04300000000000000000043 /* CategoryDesignOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B0000000000000000002B /* CategoryDesignOptions.swift */; };
+		B04400000000000000000044 /* MacFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C0000000000000000002C /* MacFeatures.swift */; };
+		B04500000000000000000045 /* CSVDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D0000000000000000000D /* CSVDocument.swift */; };
+		B04600000000000000000046 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A0000000000000000002A /* AppTheme.swift */; };
+		B04700000000000000000047 /* CategoryDesignOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B0000000000000000002B /* CategoryDesignOptions.swift */; };
+		B04800000000000000000048 /* WatchFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02D0000000000000000002D /* WatchFeatures.swift */; };
+		B04900000000000000000049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02E0000000000000000002E /* Assets.xcassets */; };
+		B04A0000000000000000004A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02F0000000000000000002F /* Assets.xcassets */; };
+		B04B0000000000000000004B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03000000000000000000030 /* Assets.xcassets */; };
+		B04C0000000000000000004C /* SyncTombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03100000000000000000031 /* SyncTombstone.swift */; };
+		B04D0000000000000000004D /* SyncTombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03100000000000000000031 /* SyncTombstone.swift */; };
+		B04E0000000000000000004E /* SyncTombstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03100000000000000000031 /* SyncTombstone.swift */; };
+		B04F0000000000000000004F /* ServerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03200000000000000000032 /* ServerSync.swift */; };
+		B05000000000000000000050 /* ServerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03200000000000000000032 /* ServerSync.swift */; };
+		B05100000000000000000051 /* ServerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03200000000000000000032 /* ServerSync.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		X00100000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P00100000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T00100000000000000000001;
+			remoteInfo = Balance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F00100000000000000000001 /* BalanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceApp.swift; sourceTree = "<group>"; };
+		F00200000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F00300000000000000000003 /* FinanceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCategory.swift; sourceTree = "<group>"; };
+		F00400000000000000000004 /* FinanceTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTransaction.swift; sourceTree = "<group>"; };
+		F00500000000000000000005 /* MonthlyBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBudget.swift; sourceTree = "<group>"; };
+		F00600000000000000000006 /* CurrencyFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatting.swift; sourceTree = "<group>"; };
+		F00700000000000000000007 /* FinanceCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCalculations.swift; sourceTree = "<group>"; };
+		F00800000000000000000008 /* BudgetEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEditorView.swift; sourceTree = "<group>"; };
+		F00900000000000000000009 /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
+		F00A0000000000000000000A /* EmptyStateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateCard.swift; sourceTree = "<group>"; };
+		F00B0000000000000000000B /* SummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
+		F00C0000000000000000000C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F00D0000000000000000000D /* CSVDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVDocument.swift; sourceTree = "<group>"; };
+		F00E0000000000000000000E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F00F0000000000000000000F /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
+		F01000000000000000000010 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		F01100000000000000000011 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		F01200000000000000000012 /* FinanceCalculationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceCalculationsTests.swift; sourceTree = "<group>"; };
+		F01300000000000000000013 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F01400000000000000000014 /* CustomCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCategory.swift; sourceTree = "<group>"; };
+		F01500000000000000000015 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		F01600000000000000000016 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		F01700000000000000000017 /* BalanceAdjustmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceAdjustmentView.swift; sourceTree = "<group>"; };
+		F01800000000000000000018 /* CategoryIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryIconView.swift; sourceTree = "<group>"; };
+		F01900000000000000000019 /* Balance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01A0000000000000000001A /* BalanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01B0000000000000000001B /* BalanceMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalanceMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01C0000000000000000001C /* BalanceWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalanceWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02000000000000000000020 /* BalanceModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModelContainer.swift; sourceTree = "<group>"; };
+		F02100000000000000000021 /* BalanceMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceMacApp.swift; sourceTree = "<group>"; };
+		F02200000000000000000022 /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
+		F02300000000000000000023 /* MacEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacEditors.swift; sourceTree = "<group>"; };
+		F02400000000000000000024 /* BalanceWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceWatchApp.swift; sourceTree = "<group>"; };
+		F02500000000000000000025 /* WatchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRootView.swift; sourceTree = "<group>"; };
+		F02600000000000000000026 /* WatchAddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAddTransactionView.swift; sourceTree = "<group>"; };
+		F02700000000000000000027 /* Balance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balance.entitlements; sourceTree = "<group>"; };
+		F02800000000000000000028 /* BalanceMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BalanceMac.entitlements; sourceTree = "<group>"; };
+		F02900000000000000000029 /* BalanceWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BalanceWatch.entitlements; sourceTree = "<group>"; };
+		F02A0000000000000000002A /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		F02B0000000000000000002B /* CategoryDesignOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDesignOptions.swift; sourceTree = "<group>"; };
+		F02C0000000000000000002C /* MacFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacFeatures.swift; sourceTree = "<group>"; };
+		F02D0000000000000000002D /* WatchFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFeatures.swift; sourceTree = "<group>"; };
+		F02E0000000000000000002E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F02F0000000000000000002F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F03000000000000000000030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F03100000000000000000031 /* SyncTombstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTombstone.swift; sourceTree = "<group>"; };
+		F03200000000000000000032 /* ServerSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSync.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		S00200000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00500000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00800000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00B0000000000000000000B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00100000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G00200000000000000000002 /* Balance */,
+				G01000000000000000000010 /* BalanceMac */,
+				G01100000000000000000011 /* BalanceWatch */,
+				G01200000000000000000012 /* Config */,
+				G00A0000000000000000000A /* BalanceTests */,
+				F01300000000000000000013 /* README.md */,
+				G00B0000000000000000000B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G00200000000000000000002 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				G00300000000000000000003 /* App */,
+				G00400000000000000000004 /* Models */,
+				G00500000000000000000005 /* Utilities */,
+				G00F0000000000000000000F /* Shared */,
+				G01300000000000000000013 /* Resources */,
+				G00600000000000000000006 /* Views */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		G00300000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000001 /* BalanceApp.swift */,
+				F00200000000000000000002 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G00400000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F00300000000000000000003 /* FinanceCategory.swift */,
+				F00400000000000000000004 /* FinanceTransaction.swift */,
+				F00500000000000000000005 /* MonthlyBudget.swift */,
+				F01400000000000000000014 /* CustomCategory.swift */,
+				F03100000000000000000031 /* SyncTombstone.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G00500000000000000000005 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F00600000000000000000006 /* CurrencyFormatting.swift */,
+				F00700000000000000000007 /* FinanceCalculations.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		G00600000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				G00700000000000000000007 /* Components */,
+				G00800000000000000000008 /* Dashboard */,
+				G00E0000000000000000000E /* Analytics */,
+				G00900000000000000000009 /* Transactions */,
+				G00C0000000000000000000C /* Budgets */,
+				G00D0000000000000000000D /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G00700000000000000000007 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F00A0000000000000000000A /* EmptyStateCard.swift */,
+				F00B0000000000000000000B /* SummaryCard.swift */,
+				F01800000000000000000018 /* CategoryIconView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		G00800000000000000000008 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F00C0000000000000000000C /* DashboardView.swift */,
+				F01700000000000000000017 /* BalanceAdjustmentView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		G00900000000000000000009 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				F00F0000000000000000000F /* NewTransactionView.swift */,
+				F01000000000000000000010 /* TransactionRow.swift */,
+				F01100000000000000000011 /* TransactionsView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		G00A0000000000000000000A /* BalanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F01200000000000000000012 /* FinanceCalculationsTests.swift */,
+			);
+			path = BalanceTests;
+			sourceTree = "<group>";
+		};
+		G00B0000000000000000000B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F01900000000000000000019 /* Balance.app */,
+				F01A0000000000000000001A /* BalanceTests.xctest */,
+				F01B0000000000000000001B /* BalanceMac.app */,
+				F01C0000000000000000001C /* BalanceWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G00C0000000000000000000C /* Budgets */ = {
+			isa = PBXGroup;
+			children = (
+				F00800000000000000000008 /* BudgetEditorView.swift */,
+				F00900000000000000000009 /* BudgetsView.swift */,
+			);
+			path = Budgets;
+			sourceTree = "<group>";
+		};
+		G00D0000000000000000000D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F00D0000000000000000000D /* CSVDocument.swift */,
+				F00E0000000000000000000E /* SettingsView.swift */,
+				F01600000000000000000016 /* CategoriesView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		G00E0000000000000000000E /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				F01500000000000000000015 /* AnalyticsView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		G00F0000000000000000000F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F02000000000000000000020 /* BalanceModelContainer.swift */,
+				F02A0000000000000000002A /* AppTheme.swift */,
+				F02B0000000000000000002B /* CategoryDesignOptions.swift */,
+				F03200000000000000000032 /* ServerSync.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		G01000000000000000000010 /* BalanceMac */ = {
+			isa = PBXGroup;
+			children = (
+				F02100000000000000000021 /* BalanceMacApp.swift */,
+				F02200000000000000000022 /* MacContentView.swift */,
+				F02300000000000000000023 /* MacEditors.swift */,
+				F02C0000000000000000002C /* MacFeatures.swift */,
+				F02F0000000000000000002F /* Assets.xcassets */,
+			);
+			path = BalanceMac;
+			sourceTree = "<group>";
+		};
+		G01100000000000000000011 /* BalanceWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F02400000000000000000024 /* BalanceWatchApp.swift */,
+				F02500000000000000000025 /* WatchRootView.swift */,
+				F02600000000000000000026 /* WatchAddTransactionView.swift */,
+				F02D0000000000000000002D /* WatchFeatures.swift */,
+				F03000000000000000000030 /* Assets.xcassets */,
+			);
+			path = BalanceWatch;
+			sourceTree = "<group>";
+		};
+		G01200000000000000000012 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F02700000000000000000027 /* Balance.entitlements */,
+				F02800000000000000000028 /* BalanceMac.entitlements */,
+				F02900000000000000000029 /* BalanceWatch.entitlements */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		G01300000000000000000013 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F02E0000000000000000002E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T00100000000000000000001 /* Balance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L00200000000000000000002 /* Build configuration list for PBXNativeTarget "Balance" */;
+			buildPhases = (
+				S00100000000000000000001 /* Sources */,
+				S00200000000000000000002 /* Frameworks */,
+				S00300000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Balance;
+			productName = Balance;
+			productReference = F01900000000000000000019 /* Balance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T00200000000000000000002 /* BalanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L00300000000000000000003 /* Build configuration list for PBXNativeTarget "BalanceTests" */;
+			buildPhases = (
+				S00400000000000000000004 /* Sources */,
+				S00500000000000000000005 /* Frameworks */,
+				S00600000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D00100000000000000000001 /* PBXTargetDependency */,
+			);
+			name = BalanceTests;
+			productName = BalanceTests;
+			productReference = F01A0000000000000000001A /* BalanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		T00300000000000000000003 /* BalanceMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L00400000000000000000004 /* Build configuration list for PBXNativeTarget "BalanceMac" */;
+			buildPhases = (
+				S00700000000000000000007 /* Sources */,
+				S00800000000000000000008 /* Frameworks */,
+				S00900000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BalanceMac;
+			productName = BalanceMac;
+			productReference = F01B0000000000000000001B /* BalanceMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T00400000000000000000004 /* BalanceWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L00500000000000000000005 /* Build configuration list for PBXNativeTarget "BalanceWatch" */;
+			buildPhases = (
+				S00A0000000000000000000A /* Sources */,
+				S00B0000000000000000000B /* Frameworks */,
+				S00C0000000000000000000C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BalanceWatch;
+			productName = BalanceWatch;
+			productReference = F01C0000000000000000001C /* BalanceWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P00100000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					T00100000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					T00200000000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = T00100000000000000000001;
+					};
+					T00300000000000000000003 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					T00400000000000000000004 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = L00100000000000000000001 /* Build configuration list for PBXProject "Balance" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ru,
+				en,
+				Base,
+			);
+			mainGroup = G00100000000000000000001;
+			productRefGroup = G00B0000000000000000000B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T00100000000000000000001 /* Balance */,
+				T00200000000000000000002 /* BalanceTests */,
+				T00300000000000000000003 /* BalanceMac */,
+				T00400000000000000000004 /* BalanceWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		S00300000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04900000000000000000049 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00600000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00900000000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04A0000000000000000004A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00C0000000000000000000C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04B0000000000000000004B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S00100000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00100000000000000000001 /* BalanceApp.swift in Sources */,
+				B00200000000000000000002 /* ContentView.swift in Sources */,
+				B00300000000000000000003 /* FinanceCategory.swift in Sources */,
+				B00400000000000000000004 /* FinanceTransaction.swift in Sources */,
+				B00500000000000000000005 /* MonthlyBudget.swift in Sources */,
+				B00600000000000000000006 /* CurrencyFormatting.swift in Sources */,
+				B00700000000000000000007 /* FinanceCalculations.swift in Sources */,
+				B00800000000000000000008 /* BudgetEditorView.swift in Sources */,
+				B00900000000000000000009 /* BudgetsView.swift in Sources */,
+				B00A0000000000000000000A /* EmptyStateCard.swift in Sources */,
+				B00B0000000000000000000B /* SummaryCard.swift in Sources */,
+				B00C0000000000000000000C /* DashboardView.swift in Sources */,
+				B00D0000000000000000000D /* CSVDocument.swift in Sources */,
+				B00E0000000000000000000E /* SettingsView.swift in Sources */,
+				B00F0000000000000000000F /* NewTransactionView.swift in Sources */,
+				B01000000000000000000010 /* TransactionRow.swift in Sources */,
+				B01100000000000000000011 /* TransactionsView.swift in Sources */,
+				B01300000000000000000013 /* CustomCategory.swift in Sources */,
+				B01400000000000000000014 /* AnalyticsView.swift in Sources */,
+				B01500000000000000000015 /* CategoriesView.swift in Sources */,
+				B01600000000000000000016 /* BalanceAdjustmentView.swift in Sources */,
+				B01700000000000000000017 /* CategoryIconView.swift in Sources */,
+				B01800000000000000000018 /* BalanceModelContainer.swift in Sources */,
+				B04000000000000000000040 /* AppTheme.swift in Sources */,
+				B04100000000000000000041 /* CategoryDesignOptions.swift in Sources */,
+				B04C0000000000000000004C /* SyncTombstone.swift in Sources */,
+				B04F0000000000000000004F /* ServerSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00400000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B01200000000000000000012 /* FinanceCalculationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00700000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02000000000000000000020 /* BalanceMacApp.swift in Sources */,
+				B02100000000000000000021 /* MacContentView.swift in Sources */,
+				B02200000000000000000022 /* MacEditors.swift in Sources */,
+				B02300000000000000000023 /* FinanceCategory.swift in Sources */,
+				B02400000000000000000024 /* FinanceTransaction.swift in Sources */,
+				B02500000000000000000025 /* MonthlyBudget.swift in Sources */,
+				B02600000000000000000026 /* CustomCategory.swift in Sources */,
+				B02700000000000000000027 /* CurrencyFormatting.swift in Sources */,
+				B02800000000000000000028 /* FinanceCalculations.swift in Sources */,
+				B02900000000000000000029 /* CategoryIconView.swift in Sources */,
+				B02A0000000000000000002A /* BalanceModelContainer.swift in Sources */,
+				B04200000000000000000042 /* AppTheme.swift in Sources */,
+				B04300000000000000000043 /* CategoryDesignOptions.swift in Sources */,
+				B04400000000000000000044 /* MacFeatures.swift in Sources */,
+				B04500000000000000000045 /* CSVDocument.swift in Sources */,
+				B04D0000000000000000004D /* SyncTombstone.swift in Sources */,
+				B05000000000000000000050 /* ServerSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S00A0000000000000000000A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03000000000000000000030 /* BalanceWatchApp.swift in Sources */,
+				B03100000000000000000031 /* WatchRootView.swift in Sources */,
+				B03200000000000000000032 /* WatchAddTransactionView.swift in Sources */,
+				B03300000000000000000033 /* FinanceCategory.swift in Sources */,
+				B03400000000000000000034 /* FinanceTransaction.swift in Sources */,
+				B03500000000000000000035 /* MonthlyBudget.swift in Sources */,
+				B03600000000000000000036 /* CustomCategory.swift in Sources */,
+				B03700000000000000000037 /* CurrencyFormatting.swift in Sources */,
+				B03800000000000000000038 /* FinanceCalculations.swift in Sources */,
+				B03900000000000000000039 /* CategoryIconView.swift in Sources */,
+				B03A0000000000000000003A /* BalanceModelContainer.swift in Sources */,
+				B04600000000000000000046 /* AppTheme.swift in Sources */,
+				B04700000000000000000047 /* CategoryDesignOptions.swift in Sources */,
+				B04800000000000000000048 /* WatchFeatures.swift in Sources */,
+				B04E0000000000000000004E /* SyncTombstone.swift in Sources */,
+				B05100000000000000000051 /* ServerSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D00100000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T00100000000000000000001 /* Balance */;
+			targetProxy = X00100000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C00100000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00200000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C00300000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C00400000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C00500000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BalanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Balance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Balance";
+			};
+			name = Debug;
+		};
+		C00600000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.BalanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Balance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Balance";
+			};
+			name = Release;
+		};
+		C00700000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C00800000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance.mac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C00900000000000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				INFOPLIST_KEY_WKWatchKitApp = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C00A0000000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Баланс";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Подключение к вашему серверу Balance для синхронизации данных.";
+				INFOPLIST_KEY_WKWatchKitApp = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				MARKETING_VERSION = 3.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Balance.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		L00100000000000000000001 /* Build configuration list for PBXProject "Balance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00100000000000000000001 /* Debug */,
+				C00200000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L00200000000000000000002 /* Build configuration list for PBXNativeTarget "Balance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00300000000000000000003 /* Debug */,
+				C00400000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L00300000000000000000003 /* Build configuration list for PBXNativeTarget "BalanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00500000000000000000005 /* Debug */,
+				C00600000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L00400000000000000000004 /* Build configuration list for PBXNativeTarget "BalanceMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00700000000000000000007 /* Debug */,
+				C00800000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L00500000000000000000005 /* Build configuration list for PBXNativeTarget "BalanceWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00900000000000000000009 /* Debug */,
+				C00A0000000000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P00100000000000000000001 /* Project object */;
+}

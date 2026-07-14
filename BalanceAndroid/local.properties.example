@@ -1,0 +1,5 @@
+# Copy this file to local.properties only when the SDK is installed in a
+# non-standard directory. Use forward slashes, including on Windows.
+# Linux:   sdk.dir=/home/USER/Android/Sdk
+# macOS:   sdk.dir=/Users/USER/Library/Android/sdk
+# Windows: sdk.dir=C:/Users/USER/AppData/Local/Android/Sdk

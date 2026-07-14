@@ -1,0 +1,8 @@
+.env
+data/
+dist/
+*.db
+*.db-shm
+*.db-wal
+balance-server
+balance-server.exe
