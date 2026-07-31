@@ -313,6 +313,10 @@ struct MacSettingsView: View {
     @AppStorage("currencyCode") private var currencyCode = SupportedCurrency.RUB.rawValue
     @AppStorage("appTheme") private var appTheme = AppTheme.system.rawValue
 
+    private var exportDocument: CSVDocument {
+        CSVDocument(transactions: transactions)
+    }
+
     var body: some View {
         Form {
             Section("Отображение") {
@@ -329,7 +333,10 @@ struct MacSettingsView: View {
                 } label: {
                     Label("Сервер и синхронизация", systemImage: "server.rack")
                 }
-                ShareLink(item: CSVDocument(transactions: transactions)) {
+                ShareLink(item: exportDocument, preview: SharePreview(
+                    "Операции",
+                    image: Image(systemName: "tablecells")
+                )) {
                     Label("Экспортировать CSV", systemImage: "square.and.arrow.up")
                 }
                 .disabled(transactions.isEmpty)
