@@ -39,14 +39,14 @@ jobs:
       - name: Package into IPA
         run: |
           mkdir -p build/Payload
-          mv build/DerivedData/Build/Products/Release-iphoneos/Balance.app build/Payload/
+          mv Balance/build/DerivedData/Build/Products/Release-iphoneos/Balance.app build/Payload/
           cd build && zip -r Balance.ipa Payload/
 
       - name: Upload iOS Artifact
         uses: actions/upload-artifact@v4
         with:
           name: unsigned-ios-ipa
-          path: build/Balance.ipa
+          path: Balance/build/Balance.ipa
 
   build-macos:
     name: Build macOS ZIP
@@ -72,11 +72,11 @@ jobs:
 
       - name: Compress macOS App
         run: |
-          cd build/DerivedData/Build/Products/Release
+          cd Balance/build/DerivedData/Build/Products/Release
           zip -r Balance.zip Balance.app
 
       - name: Upload macOS Artifact
         uses: actions/upload-artifact@v4
         with:
           name: unsigned-macos-zip
-          path: build/DerivedData/Build/Products/Release/Balance.zip
+          path: Balance/build/DerivedData/Build/Products/Release/Balance.zip
