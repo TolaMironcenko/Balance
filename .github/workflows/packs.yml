@@ -60,6 +60,7 @@ jobs:
 
       - name: Build macOS App
         run: |
+          cd Balance && \
           xcodebuild build \
             -project Balance.xcodeproj \
             -scheme BalanceMac \
