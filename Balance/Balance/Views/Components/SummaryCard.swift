@@ -31,3 +31,23 @@ struct SummaryCard: View {
         .shadow(color: .black.opacity(0.05), radius: 12, y: 5)
     }
 }
+
+#Preview("Карточки сводки") {
+    HStack(spacing: 12) {
+        SummaryCard(
+            title: "Доходы",
+            amount: 150_000,
+            currencyCode: "RUB",
+            icon: "arrow.down.left",
+            tint: .green
+        )
+        SummaryCard(
+            title: "Расходы",
+            amount: 87_300,
+            currencyCode: "RUB",
+            icon: "arrow.up.right",
+            tint: .red
+        )
+    }
+    .padding()
+}

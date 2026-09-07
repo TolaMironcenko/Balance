@@ -434,3 +434,57 @@ private struct MacCategoriesView: View {
         }
     }
 }
+
+#Preview("Главное окно") {
+    MacContentView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Обзор") {
+    MacOverviewView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+        .frame(width: 900, height: 620)
+}
+
+#Preview("Карточки метрик") {
+    HStack(spacing: 14) {
+        MacMetricCard(
+            title: "Общий баланс",
+            value: "62 700 ₽",
+            icon: "creditcard.fill",
+            tint: .indigo
+        )
+        MacMetricCard(
+            title: "Доходы за месяц",
+            value: "150 000 ₽",
+            icon: "arrow.down.left",
+            tint: .green
+        )
+        MacMetricCard(
+            title: "Расходы за месяц",
+            value: "87 300 ₽",
+            icon: "arrow.up.right",
+            tint: .red
+        )
+    }
+    .padding()
+    .frame(width: 720)
+}
+
+#Preview("Операции") {
+    MacTransactionsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+        .frame(width: 900, height: 620)
+}
+
+#Preview("Бюджеты") {
+    MacBudgetsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+        .frame(width: 900, height: 620)
+}
+
+#Preview("Категории") {
+    MacCategoriesView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+        .frame(width: 900, height: 620)
+}

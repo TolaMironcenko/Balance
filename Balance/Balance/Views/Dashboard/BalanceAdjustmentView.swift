@@ -105,3 +105,8 @@ struct BalanceAdjustmentView: View {
         dismiss()
     }
 }
+
+#Preview("Корректировка баланса") {
+    BalanceAdjustmentView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

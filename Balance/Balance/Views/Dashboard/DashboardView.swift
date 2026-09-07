@@ -211,3 +211,8 @@ struct DashboardView: View {
         return FinanceCategory.color(named: item.colorName)
     }
 }
+
+#Preview("Обзор") {
+    DashboardView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

@@ -84,3 +84,8 @@ struct SettingsView: View {
         return "Без входа данные остаются на устройстве. Собственный сервер можно подключить выше без iCloud и платной Apple Developer Team."
     }
 }
+
+#Preview("Настройки") {
+    SettingsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

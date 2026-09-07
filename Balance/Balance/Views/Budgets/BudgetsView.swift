@@ -116,3 +116,8 @@ struct BudgetsView: View {
         return .indigo
     }
 }
+
+#Preview("Бюджеты") {
+    BudgetsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

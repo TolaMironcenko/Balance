@@ -33,3 +33,20 @@ struct CategoryIconView: View {
         }
     }
 }
+
+#Preview("Иконки") {
+    HStack(spacing: 16) {
+        CategoryIconView(systemName: "cart.fill", emoji: "", tint: .orange, containerSize: 40)
+        CategoryIconView(systemName: "car.fill", emoji: "", tint: .blue)
+        CategoryIconView(systemName: "banknote.fill", emoji: "", tint: .green, size: 24, containerSize: 52)
+    }
+    .padding()
+}
+
+#Preview("Эмодзи") {
+    HStack(spacing: 16) {
+        CategoryIconView(systemName: "star.fill", emoji: "☕️", tint: .brown, size: 21, containerSize: 40)
+        CategoryIconView(systemName: "star.fill", emoji: "🐶", tint: .purple, size: 21, containerSize: 40)
+    }
+    .padding()
+}

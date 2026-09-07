@@ -175,3 +175,22 @@ struct NewTransactionView: View {
         return kind == .expense ? "Новый расход" : "Новый доход"
     }
 }
+
+#Preview("Новая операция") {
+    NewTransactionView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование операции") {
+    NewTransactionView(
+        transaction: FinanceTransaction(
+            amount: 2_450,
+            date: .now,
+            note: "Пятёрочка у дома",
+            categoryName: "Продукты",
+            categoryIcon: "cart.fill",
+            kind: .expense
+        )
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}

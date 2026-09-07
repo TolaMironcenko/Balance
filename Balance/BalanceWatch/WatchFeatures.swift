@@ -99,6 +99,13 @@ struct WatchAnalyticsView: View {
     }
 }
 
+#Preview("Аналитика") {
+    NavigationStack {
+        WatchAnalyticsView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct WatchTransactionsView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \FinanceTransaction.date, order: .reverse)
@@ -169,6 +176,13 @@ struct WatchTransactionsView: View {
     }
 }
 
+#Preview("Операции") {
+    NavigationStack {
+        WatchTransactionsView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct WatchBudgetsView: View {
     @Query private var budgets: [MonthlyBudget]
     @Query private var transactions: [FinanceTransaction]
@@ -218,6 +232,13 @@ struct WatchBudgetsView: View {
     }
 }
 
+#Preview("Бюджеты") {
+    NavigationStack {
+        WatchBudgetsView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 private struct WatchBudgetEditor: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -242,7 +263,9 @@ private struct WatchBudgetEditor: View {
     var body: some View {
         Form {
             ForEach(categories) { category in
-                TextField(category.name, value: binding(category.name), format: .number)
+                Section(category.name) {
+                    TextField(category.name, value: binding(category.name), format: .number)
+                }
             }
             Button("Сохранить", action: save)
         }
@@ -276,6 +299,29 @@ private struct WatchBudgetEditor: View {
         }
         dismiss()
     }
+}
+
+#Preview("Лимиты") {
+    NavigationStack {
+        WatchBudgetEditor(
+            budgets: [
+                MonthlyBudget(
+                    categoryName: "Продукты",
+                    categoryIcon: "cart.fill",
+                    limit: 30_000,
+                    monthStart: .now
+                ),
+                MonthlyBudget(
+                    categoryName: "Транспорт",
+                    categoryIcon: "car.fill",
+                    limit: 8_000,
+                    monthStart: .now
+                )
+            ],
+            monthStart: FinanceCalculations.monthInterval(containing: .now).start
+        )
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
 }
 
 struct WatchCategoriesView: View {
@@ -321,6 +367,13 @@ struct WatchCategoriesView: View {
         .sheet(isPresented: $showingAdd) { WatchCategoryEditor() }
         .sheet(item: $editing) { WatchCategoryEditor(category: $0) }
     }
+}
+
+#Preview("Категории") {
+    NavigationStack {
+        WatchCategoriesView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
 }
 
 private struct WatchCategoryEditor: View {
@@ -425,6 +478,28 @@ private struct WatchCategoryEditor: View {
     }
 }
 
+#Preview("Новая категория") {
+    NavigationStack {
+        WatchCategoryEditor()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование категории") {
+    NavigationStack {
+        WatchCategoryEditor(
+            category: CustomCategory(
+                name: "Кофе",
+                icon: "cup.and.saucer.fill",
+                emoji: "☕️",
+                colorName: "brown",
+                kind: .expense
+            )
+        )
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct WatchBalanceAdjustmentView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -465,6 +540,13 @@ struct WatchBalanceAdjustmentView: View {
     }
 }
 
+#Preview("Корректировка баланса") {
+    NavigationStack {
+        WatchBalanceAdjustmentView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct WatchSettingsView: View {
     @AppStorage("currencyCode") private var currencyCode = SupportedCurrency.RUB.rawValue
     @AppStorage("appTheme") private var appTheme = AppTheme.system.rawValue
@@ -490,4 +572,11 @@ struct WatchSettingsView: View {
         }
         .navigationTitle("Настройки")
     }
+}
+
+#Preview("Настройки") {
+    NavigationStack {
+        WatchSettingsView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
 }

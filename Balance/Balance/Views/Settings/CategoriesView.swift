@@ -338,3 +338,28 @@ private struct CategoryEditorView: View {
         dismiss()
     }
 }
+
+#Preview("Категории") {
+    NavigationStack {
+        CategoriesView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Новая категория") {
+    CategoryEditorView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование категории") {
+    CategoryEditorView(
+        category: CustomCategory(
+            name: "Кофе",
+            icon: "cup.and.saucer.fill",
+            emoji: "☕️",
+            colorName: "brown",
+            kind: .expense
+        )
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}

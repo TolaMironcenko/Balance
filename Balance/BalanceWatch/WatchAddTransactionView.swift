@@ -108,3 +108,22 @@ struct WatchAddTransactionView: View {
         dismiss()
     }
 }
+
+#Preview("Новая операция") {
+    WatchAddTransactionView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование операции") {
+    WatchAddTransactionView(
+        transaction: FinanceTransaction(
+            amount: 2_450,
+            date: .now,
+            note: "Пятёрочка у дома",
+            categoryName: "Продукты",
+            categoryIcon: "cart.fill",
+            kind: .expense
+        )
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}

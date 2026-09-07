@@ -57,8 +57,9 @@ struct WatchRootView: View {
                         showingAddTransaction = true
                     } label: {
                         Label("Добавить операцию", systemImage: "plus.circle.fill")
-                            .frame(maxWidth: .infinity)
+//                            .frame(maxWidth: .infinity)
                     }
+                    .frame(maxWidth: .infinity)
                     .buttonStyle(.borderedProminent)
 
                     VStack(spacing: 4) {
@@ -67,35 +68,41 @@ struct WatchRootView: View {
                         } label: {
                             Label("Аналитика", systemImage: "chart.xyaxis.line")
                         }
+                        .frame(maxWidth: .infinity)
                         NavigationLink {
                             WatchTransactionsView()
                         } label: {
                             Label("Все операции", systemImage: "list.bullet.rectangle")
                         }
+                        .frame(maxWidth: .infinity)
                         NavigationLink {
                             WatchBudgetsView()
                         } label: {
                             Label("Бюджеты", systemImage: "target")
                         }
+                        .frame(maxWidth: .infinity)
                         NavigationLink {
                             WatchCategoriesView()
                         } label: {
                             Label("Категории", systemImage: "square.grid.2x2")
                         }
+                        .frame(maxWidth: .infinity)
                         NavigationLink {
                             WatchBalanceAdjustmentView()
                         } label: {
                             Label("Корректировка", systemImage: "slider.horizontal.3")
                         }
+                        .frame(maxWidth: .infinity)
                         NavigationLink {
                             WatchSettingsView()
                         } label: {
                             Label("Настройки", systemImage: "gearshape")
                         }
+                        .frame(maxWidth: .infinity)
                     }
 
                     if !transactions.isEmpty {
-                        Text("Последние")
+                        Text("Последние операции")
                             .font(.headline)
                         ForEach(transactions.prefix(4)) { transaction in
                             HStack(spacing: 8) {
@@ -155,4 +162,9 @@ struct WatchRootView: View {
         }
         return FinanceCategory.color(named: transaction.categoryColorName)
     }
+}
+
+#Preview("Обзор") {
+    WatchRootView()
+        .modelContainer(BalanceModelContainer.previewContainer)
 }

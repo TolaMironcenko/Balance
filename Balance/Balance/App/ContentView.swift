@@ -38,3 +38,8 @@ struct ContentView: View {
         }
     }
 }
+
+#Preview("Главный экран") {
+    ContentView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

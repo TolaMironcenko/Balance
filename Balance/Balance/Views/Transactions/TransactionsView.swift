@@ -102,3 +102,8 @@ struct TransactionsView: View {
         }
     }
 }
+
+#Preview("Операции") {
+    TransactionsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}

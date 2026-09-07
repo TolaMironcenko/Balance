@@ -174,6 +174,12 @@ struct MacAnalyticsView: View {
     }
 }
 
+#Preview("Аналитика") {
+    MacAnalyticsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+        .frame(width: 1000, height: 700)
+}
+
 struct MacBalanceAdjustmentView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -227,6 +233,11 @@ struct MacBalanceAdjustmentView: View {
         ))
         dismiss()
     }
+}
+
+#Preview("Корректировка баланса") {
+    MacBalanceAdjustmentView()
+        .modelContainer(BalanceModelContainer.previewContainer)
 }
 
 struct MacBudgetEditor: View {
@@ -308,6 +319,27 @@ struct MacBudgetEditor: View {
     }
 }
 
+#Preview("Лимиты") {
+    MacBudgetEditor(
+        budgets: [
+            MonthlyBudget(
+                categoryName: "Продукты",
+                categoryIcon: "cart.fill",
+                limit: 30_000,
+                monthStart: .now
+            ),
+            MonthlyBudget(
+                categoryName: "Транспорт",
+                categoryIcon: "car.fill",
+                limit: 8_000,
+                monthStart: .now
+            )
+        ],
+        monthStart: FinanceCalculations.monthInterval(containing: .now).start
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct MacSettingsView: View {
     @Query private var transactions: [FinanceTransaction]
     @AppStorage("currencyCode") private var currencyCode = SupportedCurrency.RUB.rawValue
@@ -358,4 +390,12 @@ struct MacSettingsView: View {
         .navigationTitle("Настройки")
         .padding(24)
     }
+}
+
+#Preview("Настройки") {
+    NavigationStack {
+        MacSettingsView()
+    }
+    .modelContainer(BalanceModelContainer.previewContainer)
+    .frame(width: 640, height: 640)
 }

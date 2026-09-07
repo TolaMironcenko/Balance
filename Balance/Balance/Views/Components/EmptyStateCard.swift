@@ -22,3 +22,12 @@ struct EmptyStateCard: View {
         .background(.background, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }
+
+#Preview("Пустое состояние") {
+    EmptyStateCard(
+        icon: "tray",
+        title: "История пуста",
+        message: "Доходы и расходы будут собраны здесь."
+    )
+    .padding()
+}

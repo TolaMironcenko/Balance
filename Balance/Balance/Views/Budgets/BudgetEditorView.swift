@@ -111,3 +111,24 @@ struct BudgetEditorView: View {
         dismiss()
     }
 }
+
+#Preview("Лимиты") {
+    BudgetEditorView(
+        budgets: [
+            MonthlyBudget(
+                categoryName: "Продукты",
+                categoryIcon: "cart.fill",
+                limit: 30_000,
+                monthStart: .now
+            ),
+            MonthlyBudget(
+                categoryName: "Транспорт",
+                categoryIcon: "car.fill",
+                limit: 8_000,
+                monthStart: .now
+            )
+        ],
+        monthStart: FinanceCalculations.monthInterval(containing: .now).start
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}

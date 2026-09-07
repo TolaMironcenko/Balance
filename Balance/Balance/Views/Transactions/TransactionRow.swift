@@ -44,3 +44,37 @@ struct TransactionRow: View {
         return prefix + transaction.amount.formattedCurrency(code: currencyCode)
     }
 }
+
+#Preview("Расход") {
+    List {
+        TransactionRow(
+            transaction: FinanceTransaction(
+                amount: 2_450,
+                date: .now,
+                note: "Пятёрочка у дома",
+                categoryName: "Продукты",
+                categoryIcon: "cart.fill",
+                kind: .expense
+            ),
+            currencyCode: "RUB"
+        )
+    }
+    .listStyle(.plain)
+}
+
+#Preview("Доход") {
+    List {
+        TransactionRow(
+            transaction: FinanceTransaction(
+                amount: 150_000,
+                date: .now,
+                note: "",
+                categoryName: "Зарплата",
+                categoryIcon: "banknote.fill",
+                kind: .income
+            ),
+            currencyCode: "RUB"
+        )
+    }
+    .listStyle(.plain)
+}

@@ -107,6 +107,25 @@ struct MacTransactionEditor: View {
     }
 }
 
+#Preview("Новая операция") {
+    MacTransactionEditor()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование операции") {
+    MacTransactionEditor(
+        transaction: FinanceTransaction(
+            amount: 2_450,
+            date: .now,
+            note: "Пятёрочка у дома",
+            categoryName: "Продукты",
+            categoryIcon: "cart.fill",
+            kind: .expense
+        )
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 struct MacCategoryEditor: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -230,4 +249,22 @@ struct MacCategoryEditor: View {
         }
         dismiss()
     }
+}
+
+#Preview("Новая категория") {
+    MacCategoryEditor()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
+#Preview("Редактирование категории") {
+    MacCategoryEditor(
+        category: CustomCategory(
+            name: "Кофе",
+            icon: "cup.and.saucer.fill",
+            emoji: "☕️",
+            colorName: "brown",
+            kind: .expense
+        )
+    )
+    .modelContainer(BalanceModelContainer.previewContainer)
 }

@@ -334,6 +334,11 @@ struct AnalyticsView: View {
     }
 }
 
+#Preview("Аналитика") {
+    AnalyticsView()
+        .modelContainer(BalanceModelContainer.previewContainer)
+}
+
 private struct AnalyticsMetricCard: View {
     let title: String
     let value: String
@@ -354,4 +359,22 @@ private struct AnalyticsMetricCard: View {
         .padding()
         .background(.background, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
+}
+
+#Preview("Карточка метрики") {
+    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+        AnalyticsMetricCard(
+            title: "Доходы",
+            value: "150 000 ₽",
+            icon: "arrow.down.left",
+            tint: .green
+        )
+        AnalyticsMetricCard(
+            title: "Расходы",
+            value: "87 300 ₽",
+            icon: "arrow.up.right",
+            tint: .red
+        )
+    }
+    .padding()
 }
