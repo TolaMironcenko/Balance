@@ -74,7 +74,6 @@ jobs:
         run: |
           cd Balance/build/DerivedData/Build/Products/Release
           mv -v BalanceMac.app Balance.app
-          ls
           zip -r Balance.zip Balance.app
 
       - name: Upload macOS Artifact
