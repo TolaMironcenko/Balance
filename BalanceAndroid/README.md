@@ -94,3 +94,13 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 Проект задаёт для Gradle 2 ГБ heap, 1 ГБ metaspace и не более двух параллельных workers. Эти параметры находятся в `gradle.properties` и применяются также при сборке из Android Studio.
 
 Debug APK появится в `app/build/outputs/apk/debug/`.
+
+## Документация проекта
+
+- [`AGENTS.md`](AGENTS.md) — правила для AI-агентов и разработчиков.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — архитектура Android-клиента.
+- [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) — Room-модели и финансовые правила.
+- [`docs/SYNC.md`](docs/SYNC.md) — протокол синхронизации и безопасность сессии.
+- [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) — Android Studio, Gradle, тесты и release.
+- [`docs/PRODUCT.md`](docs/PRODUCT.md) — функциональная документация.
+
