@@ -110,3 +110,17 @@ The sync endpoint accepts transactions, custom categories and monthly budgets. T
 - Back up the SQLite database and its `-wal`/`-shm` files together, or stop the server before copying the database.
 - Changing `BALANCE_JWT_SECRET` invalidates access tokens. Existing refresh sessions remain valid and will receive new access tokens after refresh.
 - The in-process authentication limiter allows 30 authentication requests per IP per minute. Use a reverse proxy for stronger public rate limiting and request logging.
+
+## Документация проекта
+
+- [`AGENTS.md`](AGENTS.md) — правила для AI-агентов и разработчиков.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — архитектура backend.
+- [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) — модель данных.
+- [`docs/API.md`](docs/API.md) — HTTP API.
+- [`docs/SYNC.md`](docs/SYNC.md) — протокол синхронизации.
+- [`docs/SECURITY.md`](docs/SECURITY.md) — требования безопасности.
+- [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) — локальная разработка и проверки.
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — deployment/production.
+- [`docs/PRODUCT.md`](docs/PRODUCT.md) — функциональная роль сервера.
+
+BalanceServer является общим backend для Apple- и Android-клиентов Balance.
