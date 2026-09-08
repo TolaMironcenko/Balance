@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unsigned-ios-ipa
-          path: Balance/build/Balance.ipa
+          path: build/Balance.ipa
 
   build-macos:
     name: Build macOS ZIP
