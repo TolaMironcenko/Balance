@@ -94,3 +94,15 @@ CloudKit является опциональным режимом. Для нег
 ## Устранение проблем сборки
 
 После перехода с версии 2.0–2.0.2 выполните **Product → Clean Build Folder**. Если Xcode продолжает использовать старую конфигурацию watchOS target, закройте Xcode и удалите DerivedData для проекта `Balance`, затем снова откройте проект.
+
+## Документация проекта
+
+- [`AGENTS.md`](AGENTS.md) — правила для AI-агентов и разработчиков, структура проекта, invariants и checklist.
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — архитектура приложения и ответственность слоёв.
+- [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) — SwiftData-модели и финансовые инварианты.
+- [`docs/SYNC.md`](docs/SYNC.md) — протокол авторизации и синхронизации с собственным сервером.
+- [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) — локальная разработка, сборка, тесты и signing.
+- [`docs/PRODUCT.md`](docs/PRODUCT.md) — функциональная документация.
+
+> Примечание: текущий архив содержит Apple-клиент Balance. Внешний Go-сервер, упомянутый в старой версии README, в этом архиве отсутствует; `docs/SYNC.md` документирует клиентский контракт по коду `ServerSync.swift`.
+
